@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_search_poster"
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/movie_poster"
+            tools:src="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/tv_search_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/iv_search_poster"
+            android:textSize="14sp"
+            android:text="@string/movie_title"/>
+
+        <TextView
+            android:id="@+id/tv_search_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/iv_search_poster"
+            android:layout_below="@id/tv_search_title"
+            android:text="@string/movie_release"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_search_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/iv_search_poster"
+            android:layout_below="@id/tv_search_release"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/overview"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

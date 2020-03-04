@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film &amp; Acara Tv</string>
+    <string name="title_movies">Film</string>
+    <string name="title_tv">Acara Tv</string>
+    <string name="title_fav">Favorit</string>
+    <string name="movie_poster">Poster Flim</string>
+    <string name="movie_title">Judul Film</string>
+    <string name="movie_release">Tayang</string>
+    <string name="overview">Ringkasan</string>
+    <string name="tv_show_poster">Poster Acara Tv</string>
+    <string name="settings">Pengaturan</string>
+    <string name="release_title">Tayang</string>
+    <string name="overview_title">Ringkasan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tab_title_tv">Acara Tv</string>
+    <string name="tab_title_movie">Film</string>
+    <string name="favorite_movie_poster">Favorite Movie Poster</string>
+    <string name="delete">Hapus</string>
+    <string name="favorite">Favorit</string>
+    <string name="back_poster">Back poster</string>
+    <string name="search_movie">Cari Film</string>
+</resources>
