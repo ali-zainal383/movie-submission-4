@@ -21,7 +21,7 @@ import com.zainal.android.movie.db.DatabaseContract.FavoriteMovie.Companion.RELE
 import com.zainal.android.movie.db.DatabaseContract.FavoriteMovie.Companion._ID
 import com.zainal.android.movie.helper.MovieHelper
 import com.zainal.android.movie.model.Movie
-import com.zainal.android.movie.ui.favorite.movie.TabMovieAdapter
+import com.zainal.android.movie.favorite.movie.TabMovieAdapter
 import kotlinx.android.synthetic.main.activity_detail_movie.*
 
 class DetailMovieActivity : AppCompatActivity(), View.OnClickListener {

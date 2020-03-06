@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.zainal.android.movie.R
-import com.zainal.android.movie.ui.favorite.FavoriteFragment
-import com.zainal.android.movie.ui.favorite.movie.TabMovieFragment
-import com.zainal.android.movie.ui.favorite.tv.TabTvFragment
+import com.zainal.android.movie.favorite.FavoriteFragment
+import com.zainal.android.movie.favorite.movie.TabMovieFragment
+import com.zainal.android.movie.favorite.tv.TabTvFragment
 
 class SectionPagerAdapter(private val mContext: FavoriteFragment, fm: FragmentManager) : FragmentStatePagerAdapter (fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 

@@ -21,7 +21,7 @@ import com.zainal.android.movie.db.DatabaseContract.FavoriteTvShow.Companion.REL
 import com.zainal.android.movie.db.DatabaseContract.FavoriteTvShow.Companion._ID
 import com.zainal.android.movie.helper.TvShowHelper
 import com.zainal.android.movie.model.TvShow
-import com.zainal.android.movie.ui.favorite.tv.TabTvAdapter
+import com.zainal.android.movie.favorite.tv.TabTvAdapter
 import kotlinx.android.synthetic.main.activity_detail_tv_show.*
 
 class DetailTvShowActivity : AppCompatActivity(), View.OnClickListener {

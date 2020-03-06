@@ -1,4 +1,4 @@
-package com.zainal.android.movie.ui.favorite.movie
+package com.zainal.android.movie.favorite.movie
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import com.bumptech.glide.request.RequestOptions
 import com.zainal.android.movie.custom.CustomOnItemClickListener
 import com.zainal.android.movie.R
 import com.zainal.android.movie.helper.MovieHelper
-import com.zainal.android.movie.model.TvShow
 import com.zainal.android.movie.detail.DetailMovieActivity
 import com.zainal.android.movie.model.Movie
 import kotlinx.android.synthetic.main.item_favorite_movie.view.*

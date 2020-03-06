@@ -3,6 +3,8 @@
     package="com.zainal.android.movie">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".search.SearchReasultActivity"></activity>
+        <activity android:name=".settings.SettingsActivity"/>
+        <activity android:name=".search.SearchResultActivity" />
         <activity android:name=".detail.DetailTvShowActivity" />
         <activity android:name=".detail.DetailMovieActivity" />
         <activity
@@ -24,7 +27,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".search.SearchResultActivity" />
+
+        <receiver
+            android:name=".notifications.DailyReminderNotification"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".notifications.DailyReleaseNotification"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".widget.ImageFavoriteWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/image_favorite_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
     </application>
 
 </manifest>

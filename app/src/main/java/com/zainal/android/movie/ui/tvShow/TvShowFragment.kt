@@ -15,6 +15,7 @@ import com.zainal.android.movie.R
 import com.zainal.android.movie.detail.DetailTvShowActivity
 import com.zainal.android.movie.model.TvShow
 import com.zainal.android.movie.search.SearchResultActivity
+import com.zainal.android.movie.settings.SettingsActivity
 import com.zainal.android.movie.viewmodels.SearchViewModel
 import com.zainal.android.movie.viewmodels.TvShowViewModel
 import kotlinx.android.synthetic.main.fragment_tv_show.*
@@ -103,8 +104,8 @@ class TvShowFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_change_settings -> {
-                val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
-                startActivity(mIntent)
+                val settingsIntent = Intent(context, SettingsActivity::class.java)
+                startActivity(settingsIntent)
             }
         }
         return super.onOptionsItemSelected(item)

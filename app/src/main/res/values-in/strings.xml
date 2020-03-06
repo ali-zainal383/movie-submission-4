@@ -20,5 +20,26 @@
     <string name="delete">Hapus</string>
     <string name="favorite">Favorit</string>
     <string name="back_poster">Back poster</string>
+
+    <string name="search">Cari</string>
+    <string name="title_search">Cari</string>
     <string name="search_movie">Cari Film</string>
+    <string name="search_tvShow">Cari Acara Tv</string>
+
+    <string name="daily_reminder_summary">Pengingat untuk kembali ke aplikasi</string>
+
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="empty_text">No Data</string>
+    <string name="poster_widget">Poster Widget</string>
+
+    <string name="notification_settings">Pengaturan Pemberitahuan</string>
+    <string name="language_settings">Pengaturan Bahasa</string>
+
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="daily_reminder_notification">Notifikasi</string>
+    <string name="daily_reminder_notification_message">Cek acara tv dan film favorite kamu sekarang!</string>
+
+    <string name="change_language">Ganti Bahasa</string>
+
 </resources>

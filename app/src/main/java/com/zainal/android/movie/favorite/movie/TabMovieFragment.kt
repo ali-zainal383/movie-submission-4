@@ -1,12 +1,10 @@
-package com.zainal.android.movie.ui.favorite.movie
+package com.zainal.android.movie.favorite.movie
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.zainal.android.movie.R
@@ -14,6 +12,7 @@ import com.zainal.android.movie.helper.MovieHelper
 import com.zainal.android.movie.helper.MappingHelper
 import com.zainal.android.movie.detail.DetailMovieActivity
 import com.zainal.android.movie.model.Movie
+import com.zainal.android.movie.settings.SettingsActivity
 import kotlinx.android.synthetic.main.fragment_tab_movie.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -62,6 +61,21 @@ class TabMovieFragment : Fragment() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putParcelableArrayList(EXTRA_STATE, tabMovieAdapter.listMovies)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.favorite_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.action_change_settings -> {
+                val settingsIntent = Intent(context, SettingsActivity::class.java)
+                startActivity(settingsIntent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun loadMoviesAsync() {

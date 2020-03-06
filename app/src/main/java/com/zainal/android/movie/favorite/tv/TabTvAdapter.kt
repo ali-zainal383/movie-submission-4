@@ -1,4 +1,4 @@
-package com.zainal.android.movie.ui.favorite.tv
+package com.zainal.android.movie.favorite.tv
 
 import android.content.Intent
 import android.view.LayoutInflater
