@@ -4,7 +4,6 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.provider.Settings
 import android.view.*
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
@@ -12,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.zainal.android.movie.R
-import com.zainal.android.movie.detail.DetailMovieActivity
+import com.zainal.android.movie.ui.detail.DetailMovieActivity
 import com.zainal.android.movie.model.Movie
 import com.zainal.android.movie.search.SearchResultActivity
 import com.zainal.android.movie.settings.SettingsActivity
@@ -120,4 +119,5 @@ class MovieFragment : Fragment() {
         }
     }
 }
+
 

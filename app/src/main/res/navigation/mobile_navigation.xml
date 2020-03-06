@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/navigation_favorite"
-        android:name="com.zainal.android.movie.favorite.FavoriteFragment"
+        android:name="com.zainal.android.movie.ui.favorite.FavoriteFragment"
         android:label="@string/title_fav"
         tools:layout="@layout/fragment_favorite" />
 </navigation>

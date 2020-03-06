@@ -9,6 +9,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.zainal.android.movie.R
 import com.zainal.android.movie.notifications.DailyReminderNotification
+import com.zainal.android.movie.notifications.ReleaseTodayNotification
 
 /**
  * A simple [Fragment] subclass.
@@ -16,6 +17,7 @@ import com.zainal.android.movie.notifications.DailyReminderNotification
 class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
 
     private val dailyReminderNotification = DailyReminderNotification()
+    private val releaseTodayNotification = ReleaseTodayNotification()
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
@@ -40,6 +42,12 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                 when(sharedPreferences?.getBoolean(key, false)){
                     true -> dailyReminderNotification.setDailyReminderAlarm(context)
                     false -> dailyReminderNotification.cancelDailyReminderAlarm(context)
+                }
+            }
+            "daily_release" -> {
+                when(sharedPreferences?.getBoolean(key, false)){
+                    true -> releaseTodayNotification.setReleaseTodayAlarm(context)
+                    false -> releaseTodayNotification.cancelReleaseTodayAlarm(context)
                 }
             }
         }

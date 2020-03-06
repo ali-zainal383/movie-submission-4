@@ -11,6 +11,10 @@
             app:key="daily_reminder"
             app:title="@string/daily_reminder" />
 
+        <SwitchPreferenceCompat
+            app:key="daily_release"
+            app:title="@string/daily_release" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

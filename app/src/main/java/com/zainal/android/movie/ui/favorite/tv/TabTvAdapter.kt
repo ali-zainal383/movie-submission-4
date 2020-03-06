@@ -1,4 +1,4 @@
-package com.zainal.android.movie.favorite.tv
+package com.zainal.android.movie.ui.favorite.tv
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import com.zainal.android.movie.custom.CustomOnItemClickListener
 import com.zainal.android.movie.R
 import com.zainal.android.movie.helper.TvShowHelper
 import com.zainal.android.movie.model.TvShow
-import com.zainal.android.movie.detail.DetailTvShowActivity
+import com.zainal.android.movie.ui.detail.DetailTvShowActivity
 import kotlinx.android.synthetic.main.item_favorite_tv.view.*
 
 class TabTvAdapter : RecyclerView.Adapter<TabTvAdapter.CardViewHolder>() {

@@ -1,4 +1,4 @@
-package com.zainal.android.movie.favorite.tv
+package com.zainal.android.movie.ui.favorite.tv
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,7 @@ import com.zainal.android.movie.R
 import com.zainal.android.movie.helper.TvShowHelper
 import com.zainal.android.movie.model.TvShow
 import com.zainal.android.movie.helper.MappingHelper
-import com.zainal.android.movie.detail.DetailTvShowActivity
+import com.zainal.android.movie.ui.detail.DetailTvShowActivity
 import com.zainal.android.movie.settings.SettingsActivity
 import kotlinx.android.synthetic.main.fragment_tab_tv.*
 import kotlinx.coroutines.Dispatchers
@@ -61,25 +61,7 @@ class TabTvFragment : Fragment() {
         }
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putParcelableArrayList(EXTRA_STATE, tabTvAdapter.listTvShows)
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.favorite_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.action_change_settings -> {
-                val settingsIntent = Intent(context, SettingsActivity::class.java)
-                startActivity(settingsIntent)
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
     private fun loadTvShowAsync() {
         GlobalScope.launch(Dispatchers.Main) {

@@ -1,10 +1,9 @@
-package com.zainal.android.movie.detail
+package com.zainal.android.movie.ui.detail
 
 import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -21,7 +20,8 @@ import com.zainal.android.movie.db.DatabaseContract.FavoriteTvShow.Companion.REL
 import com.zainal.android.movie.db.DatabaseContract.FavoriteTvShow.Companion._ID
 import com.zainal.android.movie.helper.TvShowHelper
 import com.zainal.android.movie.model.TvShow
-import com.zainal.android.movie.favorite.tv.TabTvAdapter
+import com.zainal.android.movie.settings.SettingsActivity
+import com.zainal.android.movie.ui.favorite.tv.TabTvAdapter
 import kotlinx.android.synthetic.main.activity_detail_tv_show.*
 
 class DetailTvShowActivity : AppCompatActivity(), View.OnClickListener {
@@ -95,14 +95,14 @@ class DetailTvShowActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
+        menuInflater.inflate(R.menu.detail_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_change_settings -> {
-                val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+                val mIntent = Intent(this, SettingsActivity::class.java)
                 startActivity(mIntent)
             }
             android.R.id.home -> {
