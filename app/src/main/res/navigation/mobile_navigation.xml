@@ -8,19 +8,19 @@
 
     <fragment
         android:id="@+id/navigation_movie"
-        android:name="com.zainal.android.movie.ui.movie.MovieFragment"
+        android:name="com.zainal.android.catalogue.ui.movie.MovieFragment"
         android:label="@string/title_movies"
         tools:layout="@layout/fragment_movie" />
 
     <fragment
         android:id="@+id/navigation_tv"
-        android:name="com.zainal.android.movie.ui.tvShow.TvShowFragment"
+        android:name="com.zainal.android.catalogue.ui.tvShow.TvShowFragment"
         android:label="@string/title_tv"
         tools:layout="@layout/fragment_tv_show" />
 
     <fragment
         android:id="@+id/navigation_favorite"
-        android:name="com.zainal.android.movie.ui.favorite.FavoriteFragment"
+        android:name="com.zainal.android.catalogue.favorite.FavoriteFragment"
         android:label="@string/title_fav"
         tools:layout="@layout/fragment_favorite" />
 </navigation>

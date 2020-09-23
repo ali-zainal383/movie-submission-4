@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zainal.android.movie">
+    package="com.zainal.android.catalogue">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission android:name="com.zainal.android.catalogue.READ_DATABASE" android:protectionLevel="normal"/>
+    <permission android:name="com.zainal.android.catalogue.WRITE_DATABASE" android:protectionLevel="normal"/>
 
     <application
         android:allowBackup="true"
@@ -13,30 +16,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".settings.SettingsActivity"/>
-        <activity android:name=".search.SearchResultActivity" />
-        <activity android:name="com.zainal.android.movie.ui.detail.DetailTvShowActivity" />
-        <activity android:name="com.zainal.android.movie.ui.detail.DetailMovieActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <provider
+            android:name="com.zainal.android.catalogue.providers.FavoriteProvider"
+            android:authorities="com.zainal.android.catalogue"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.zainal.android.catalogue.READ_DATABASE"
+            android:writePermission="com.zainal.android.catalogue.WRITE_DATABASE"/>
 
         <receiver
-            android:name=".notifications.DailyReminderNotification"
+            android:name="com.zainal.android.catalogue.notifications.DailyReminderNotification"
             android:enabled="true"
             android:exported="true" />
+
         <receiver
-            android:name=".notifications.ReleaseTodayNotification"
+            android:name="com.zainal.android.catalogue.notifications.ReleaseTodayNotification"
             android:enabled="true"
             android:exported="true" />
-        <receiver android:name=".widget.ImageFavoriteWidget">
+
+        <receiver android:name="com.zainal.android.catalogue.widget.ImageFavoriteWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -47,8 +46,29 @@
         </receiver>
 
         <service
-            android:name=".widget.StackWidgetService"
+            android:name="com.zainal.android.catalogue.widget.StackWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity android:name="com.zainal.android.catalogue.detail.DetailTvShowActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <activity android:name="com.zainal.android.catalogue.detail.DetailMovieActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity android:name="com.zainal.android.catalogue.settings.SettingsActivity" />
+        <activity android:name="com.zainal.android.catalogue.search.SearchResultActivity" />
+
+        <activity
+            android:name="com.zainal.android.catalogue.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

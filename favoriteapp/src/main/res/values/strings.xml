@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FavoriteApp</string>
+    <string name="tab_movie">Movie</string>
+    <string name="tab_tv_show">Tv Show</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite_movie_poster">Movie Poster</string>
+    <string name="movie_title">favorite movie title</string>
+    <string name="movie_release">favorite movie release</string>
+    <string name="overview">favorite movie overview</string>
+    <string name="back_poster">backdrop poster</string>
+    <string name="release_title">release</string>
+    <string name="overview_title">overview</string>
+    <string name="delete">Delete</string>
+    <string name="tv_show_poster">tv show poster</string>
+</resources>
